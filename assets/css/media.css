@@ -1,0 +1,227 @@
+    @media only screen and (max-width: 1372px) {
+    #press .press-slider .slick-arrow.slick-next {
+        right: -10px;
+        max-width: 20px;
+    }
+    #press .press-slider .slick-arrow.slick-prev {
+        left: -10px;
+        max-width: 20px;
+    }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    header .header-content nav {
+        margin-left: 19%;
+    }
+    header .header-content nav {
+        
+        
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    header .header-content nav {
+        max-width: 433px;
+        margin: 0 auto;
+            margin-left: 26%;
+    }
+    header .header-content nav ul li {
+        margin-right: 35px;
+    }
+    
+    #menu p {
+        padding-right: 0;
+    }
+    #menu .menu-content {
+        text-align: center;
+    }
+    #about>.container {
+        width: auto;
+    }
+    #about>.container .cont {
+        text-align: center;
+    }
+    #about>.container .col-md-6 {
+        width: 100%;
+
+    }
+
+    #about>.container .col-md-6:nth-child(n+1) {
+        margin-top: 100px;
+        
+    }
+    #events > .container {
+        width: auto;
+    }
+    #events > .container .col-md-6 {
+        width: 100%;
+    }
+    #events > .container .col-md-6.margin-left  {
+        margin-left: 0;
+    }
+    #contact > .container {
+        width: auto;
+    }
+    #contact > .container .col-md-6 {
+        width: 100%;
+    }
+    #contact > .container .col-md-6.margin-left  {
+        margin-left: 0;
+    }
+    #about>.container .col-md-6.margin-left  {
+        margin-left: 0;
+    }
+    #about>.container .thumb img {
+        margin: 0 auto;
+    }
+    #events > .container {
+        text-align: center;
+    }
+    #menu .bg1 {
+        top: 200%;
+        max-width: 50%;
+    }
+
+    #contact .col-md-6.padding-left {
+        padding-left: 15px;
+    }
+    #contact {
+        background: url('../images/contact-bg_03 (2).png') center right no-repeat;
+        background-size: 40%;
+    }
+    #contact .col-md-6 {
+        text-align: center;
+    }
+    #contact .map-img {
+        margin: 0 auto;
+    }
+    #menu .bg1 {
+        display: none;
+    }
+    #events {
+        background: none;
+    }
+    #contact {
+        background: none;
+    }
+
+    .col-md-6.padding-left {
+        padding-left: 15px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    header .header-content nav {
+        display: none;
+    }
+    header .header-content .social {
+        display: none;
+    }
+    header .header-content nav {
+        position: absolute;
+        width: 100%;
+        top: 35px;
+        max-width: initial;
+        margin-left: 0;
+        background-color: #E1D7CB;
+    }
+    header .header-content nav ul li {
+        float: none;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    header .header-content nav {
+        margin-top: 5px;
+    }
+    header .header-content nav ul li a {
+        font-size: 23px;
+    }
+    #about {
+        background-size: 50%;
+    }
+    header .header-content nav ul li a {
+        font-family: 'BellGothicBT-Bold';
+    }
+
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .slider .item {
+        min-height: 330px;
+    }
+    .slider .carousel-caption h2 {
+        padding: 15px 10px;
+        max-width: 225px;
+        font-size: 16px;
+    }
+    .slider .carousel-caption h2 span {
+        font-size: 25px;
+    }
+    .slider .right span.arrow-next,
+    .slider .left span.arrow-prev {
+        width: 30px;
+    }
+    .femme-diaries h3 {
+        font-size: 25px;
+    }
+    .femme-diaries .mobile-slider .mob-item>img {
+        max-width: 85%;
+    }
+    .femme-diaries .mobile-slider .slick-dots {
+        max-width: 213px;
+    }
+    .femme-diaries .mobile-slider .slick-dots li {
+        margin-right: 12px;
+    }
+    .femme-diaries .mobile-slider .slick-dots li button {
+        width: 16px;
+        height: 16px;
+    }
+    #about {
+        background-size: 60%;
+    }
+    
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    header .header-content nav {
+        display: block !important;
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width: 992px) {}
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width: 1200px) {}
