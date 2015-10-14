@@ -1,0 +1,31 @@
+<section id="events">
+  <!-- events -->
+  <div class="container">
+      <h2 class="text-center">events</h2>
+      <div class="row">
+      <div class="col-md-6">
+        {% for menu in boxes.event_menus.all %}
+            <h3>
+              {{ menu.name }}
+            </h3>
+            {{ menu.fields.description }}
+            {% if loop.index is divisibleby 3 %}</div><div class="col-md-6 margin-left">{% endif %}
+        {% endfor %}
+
+        <div class="contact">
+            <h3>contact us</h3>
+            <p>Phone: {{ boxes.locations.all[0].phone_number }} or <a href="#">info@ninebark-napa.com</a> </p>
+        </div>
+      </div>
+      </div>
+      <div class="row join">
+          <div class="col-md-6 col-md-offset-3 text-center">
+              <p>Join our mailing list <span>for the latest news & offers</span> </p>
+              <form>
+                  <input type="text" name="email" placeholder="email address">
+                  <button type="submit">join</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>

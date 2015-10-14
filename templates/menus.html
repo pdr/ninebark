@@ -1,0 +1,23 @@
+<section id="menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="menu-nav">
+                {% for menu in boxes.menus.all %}
+                    <li class="active"><a href="#">{{ menu.name }}</a></li>
+                {% endfor %}
+                </ul>
+                <div class="bg1">
+                </div>
+            </div>
+            <div class="col-md-9">
+                {% for menu in boxes.menus.all %}
+                <div class="menu-content active" data-index="{{ menu.name }}">
+                    {{ menu.description }}
+                </div>
+                {% endfor %}
+                <div class="bg2"></div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -12,12 +12,12 @@ $(document).ready(function() {
 
 
 
-    $('nav ul li a').click(function(event) {
+    $('nav ul li a:not(a.social-a)').click(function(event) {
         event.preventDefault();
         $(this).parent('li').addClass('active');
 
         var thisTarget = $(this).attr('href');
-
+        console.log(thisTarget);
         $('html,body').animate({
             scrollTop: $(thisTarget).offset().top
         }, 'slow');

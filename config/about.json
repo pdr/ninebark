@@ -1,0 +1,16 @@
+{
+    "name": "About",
+    "fields": {
+        "heading": {
+            "title": "Heading",
+            "type": "section",
+            "items": {
+                "heading": "text",
+                "description": "wysiwyg"
+            },
+        }
+    },
+    "wireframe": [
+        "section-heading",
+    ]
+}

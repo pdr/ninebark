@@ -1,0 +1,20 @@
+{% with location = boxes.locations.all[0] %}
+    <section id="contact">
+    <div class="container">
+        <h2 class="text-center">contact us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>phone number & email</h3>
+                {{ location.description }}
+                <h3>hours</h3>
+                {{ location.hours }}
+            </div>
+            <div class="col-md-6 padding-left">
+                <h3>location</h3>
+                <p>{{ location.address }}</p>
+                <img src="{{ location.images[0] }}" class="img-responsive map-img" />
+            </div>
+        </div>
+    </div>
+    </section>
+{% endwith %}

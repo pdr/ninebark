@@ -1,0 +1,13 @@
+{
+  "theme": {
+    "Name": "Nine Bark",
+    "Author": "The BentoBox Team",
+    "fields": {}
+  },
+  "navs": [
+    {
+      "name": "Main Navigation",
+      "slug": "main"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<section id="about" class="text-center">
+<!-- about -->
+<div class="container">
+    <h1>{{ current.fields.heading.heading }}</h1>
+    <p>{{ current.fields.heading.description }}</p>
+    <h1 class="second">The team</h1>
+    <div class="row">
+        {% for staff in boxes.team.all %}
+            <div class="col-md-6  {% if loop.index is divisibleby(2) %}margin-left{% endif %}">
+                <div class="thumb">
+                    <img class="img-responsive" src="{{ staff.image }}">
+                </div>
+                <div class="cont">
+                    <h3>{{ staff.name }}</h3>
+                    {{ staff.bio }}
+                </div>
+            </div>
+            {% if loop.index is divisibleby(2) %}
+                </div>
+                <div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</section>
