@@ -616,3 +616,7 @@ header .header-content .line {
 #contact ul li {
     margin-bottom: 23px
 }
+
+#success, #error {
+    margin-top: 30px;
+}

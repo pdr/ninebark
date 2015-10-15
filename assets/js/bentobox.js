@@ -67,12 +67,15 @@
 
 		newsletter.options = {
 			formSelector: 'form#email_newsletter',
-			successMessage: 'div.success',
-			errorContainer: 'div.error',
+			successMessage: 'div#success',
+			errorMessage: 'div#error',
 		};
 
 		newsletter.handleFormSubmit = function(event) {
 			event.preventDefault();
+
+			$(newsletter.options.errorMessage).hide();
+
 			var form = $(this);
 			$.ajax({
 				type: 'POST',
@@ -84,7 +87,15 @@
 		};
 
 		newsletter.formSuccess = function(result) {
-			$(newsletter.options.successMessage).fadeIn();
+			if (result.success != true){
+				newsletter.formError();
+			} else {
+				$(newsletter.options.successMessage).fadeIn();
+			}
+		};
+
+		newsletter.formError = function(result) {
+			$(newsletter.options.errorMessage).fadeIn();
 		};
 
 		newsletter.initialize = function(options) {
@@ -106,7 +117,7 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(3);
+	var Utils = __webpack_require__(3);
 
 	var Reservations = (function() {
 		var reservations = {};

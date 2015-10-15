@@ -23,10 +23,20 @@
       <div class="row join">
           <div class="col-md-6 col-md-offset-3 text-center">
               <p>Join our mailing list <span>for the latest news & offers</span> </p>
-              
+                <form id="email_newsletter" method="post" name="signup" action="/email_provider_subscribe/">
+                    <input type="hidden" name="group_id" value="2787381" />
+                     {% csrf_token %}
+                        <div style="display: none;">
+                            <label>leave this field blank to prove your humanity
+                                <input type="text" name="comment_body" value="" />
+                            </label>
+                        </div>
                   <input type="text" name="email" placeholder="email address">
                   <button type="submit">join</button>
-              
+              </form>
+              <div class="clearfix"></div>
+              <div id="success" style="display:none">Thank you for signing up.</div>
+              <div id="error" style="display:none">Sorry - there was an error.<br> Please try again later.</div>
           </div>
       </div>
   </div>

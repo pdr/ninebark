@@ -92,6 +92,7 @@
         {% if account.services.opentable %}
         Bento.Reservations.initialize({provider: 'opentable', opentable_id: '{{ account.services.opentable.id }}'});
         {% endif %}
+        Bento.Newsletter.initialize();
     });
     </script>
     <script id="opentable-modal-template" type="text/template">
