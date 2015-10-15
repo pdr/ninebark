@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 
-    $('nav ul li a:not(a.social-a)').click(function(event) {
+    $('nav ul li a:not(a.nonav)').click(function(event) {
         event.preventDefault();
         $(this).parent('li').addClass('active');
 

@@ -26,17 +26,17 @@
                 {% for item in navs.main %}
                     <li class="{{ item.slug }}"><a href="#{{ item.slug }}">{{ item.name }}</a></li>
                 {% endfor %}
-                    <li class="home"><a href="#home">BOOK NOW</a></li>
+                    <li class="home"><a class="reserve nonav" href="#">BOOK NOW</a></li>
                     <li class="clearfix social-li visible-xs">
                         <ul class="social visible-xs">
                             <li>
-                                <a target="_blank" class="social-a fb" href="{{ account.services.facebook.url }}"></a>
+                                <a target="_blank" class="social-a nonav fb" href="{{ account.services.facebook.url }}"></a>
                             </li>
                             <li>
-                                <a target="_blank" class="social-a inst" href="{{ account.services.instagram.url }}"></a>
+                                <a target="_blank" class="social-a nonav inst" href="{{ account.services.instagram.url }}"></a>
                             </li>
                             <li>
-                                <a target="_blank" class="social-a tw" href="{{ account.services.twitter.url }}"></a>
+                                <a target="_blank" class="social-a nonav tw" href="{{ account.services.twitter.url }}"></a>
                             </li>
                         </ul>
                     </li>
