@@ -12,5 +12,10 @@
     },
     "wireframe": [
         "section-heading",
+        {
+            "boxes-team": {
+                "width": "columns-6"
+            }
+        }
     ]
 }
