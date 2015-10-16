@@ -16,9 +16,13 @@
     header .header-content nav {
         margin-left: 19%;
     }
-    header .header-content nav {
-        
-        
+    #events .join {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    #contact {
+        background-size: 28%;
     }
 }
 
@@ -27,9 +31,9 @@
 
 @media only screen and (max-width: 992px) {
     header .header-content nav {
-        max-width: 433px;
+        max-width: 440px;
         margin: 0 auto;
-            margin-left: 26%;
+        margin-left: 26%;
     }
     header .header-content nav ul li {
         margin-right: 35px;
@@ -120,6 +124,9 @@
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
+    header {
+        min-height: 60px;
+    }
     header .header-content nav {
         display: none;
     }
@@ -141,7 +148,7 @@
         margin-bottom: 20px;
     }
     header .header-content nav {
-        margin-top: 5px;
+        margin-top: 3px;
     }
     header .header-content nav ul li a {
         font-size: 23px;
@@ -191,7 +198,7 @@
         height: 16px;
     }
     #about {
-        background-size: 60%;
+        background-size: 90%;
     }
     
 }

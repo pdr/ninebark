@@ -29,6 +29,7 @@ ul {
 
 body {
     background: url(../images/body-bg_03.jpg)
+
 }
 
 h4 {
@@ -57,7 +58,12 @@ header .header-content {
 
 header .header-content .logo {
     float: left;
-    outline: 0
+    outline: 0;
+    max-width: 170px;
+}
+
+header .header-content .logo>img {
+    padding-top: 5px;
 }
 
 header .header-content .menu-toggle-btn {
@@ -218,7 +224,9 @@ header .header-content .line {
     margin: 8% auto 0;
     height: 450px;
     text-align: center;
-    background: url(../images/home-bg_03.jpg) center center no-repeat
+    background: url(../images/home-bg_03.jpg) center center no-repeat;
+    background-size: contain;
+
 }
 
 #home .book-now-box .book-now-btn {
@@ -246,7 +254,8 @@ header .header-content .line {
 #menu {
     padding-top: 135px;
     min-height: 700px;
-    position: relative
+    position: relative;
+    letter-spacing: 0.8px;
 }
 
 #menu .bg1 {
@@ -256,7 +265,8 @@ header .header-content .line {
     left: 0;
     background: url(../images/bg-leaf_02.jpg) no-repeat;
     background-size: contain;
-    max-width: 100%
+    max-width: 100%;
+    margin-top: 20px;
 }
 
 #menu .bg2 {
@@ -267,7 +277,7 @@ header .header-content .line {
     background: url(../images/menu-bg-2_06.png) no-repeat;
     background-size: contain;
     max-width: 100%;
-    margin-top: -10%
+    margin-top: 0%;
 }
 
 #menu>.container {
@@ -275,7 +285,11 @@ header .header-content .line {
 }
 
 #menu .col-md-9 {
-    min-height: 1346px
+    transition: 0.9s all;
+    -webkit-transition: 0.9s all;
+    -moz-transition: 0.9s all;
+    -ms-transition: 0.9s all;
+    overflow: hidden;
 }
 
 #menu .col-md-3 {
@@ -288,9 +302,11 @@ header .header-content .line {
 }
 
 #menu .menu-nav li {
-    margin-bottom: 30px
+    margin-bottom: 25px
 }
-
+#menu .menu-nav li:last-child {
+    margin-bottom: 40px;    
+}
 #menu .menu-nav li.active a {
     color: #1d6049
 }
@@ -307,26 +323,35 @@ header .header-content .line {
 
 #menu .menu-nav li a:focus,
 #menu .menu-nav li a:hover {
-    color: #1d6049;
+    
     text-decoration: none
 }
 
 #menu .menu-content {
-    display: none
+    display: none;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: 0.9s all;
+    -webkit-transition: 0.9s all;
+    -moz-transition: 0.9s all;
+    -ms-transition: 0.9s all;
 }
 
 #menu .menu-content p {
-    line-height: 2.4
+    line-height: 2.4;
 }
 
 #menu .menu-content.active {
-    display: block
+    display: block;
+    transform: translateY(0%);
+    opacity: 1;
+
 }
 
 #menu h2 {
     color: #1d6049;
     font-family: BellGothicBT-Bold;
-    font-size: 23px
+    font-size: 20px
 }
 
 #menu h3 {
@@ -335,21 +360,21 @@ header .header-content .line {
     margin-bottom: 18px;
     margin-top: 26px;
     font-size: 25px;
-    font-size: 19px
+    font-size: 16px
 }
 
 #menu p {
-    color: #6d6e71;
+    color: #666666;
     font-family: BellGothicBT-Bold;
     padding-right: 50%;
-    font-size: 15px
+    font-size: 14px
 }
 
 #about {
     background: url(../images/about-bottom_10.png) center bottom no-repeat;
     padding: 119px 0;
     min-height: 1100px;
-    background-size: 25%
+    background-size: 28%
 }
 
 #about>.container {
@@ -368,13 +393,13 @@ header .header-content .line {
     font-family: BellGothicBT-Bold;
     color: #1d6049;
     margin-bottom: 15px;
-    font-size: 22px
+    font-size: 20px
 }
 
 #about>.container p {
     font-family: BellGothicBT-Roman;
     color: #6d6e71;
-    font-size: 20px
+    font-size: 18px
 }
 
 #about>.container h1.second {
@@ -398,7 +423,8 @@ header .header-content .line {
     font-size: 17px;
     font-family: BellGothicBT-Roman;
     color: #6d6e71;
-    margin-top: 20px
+    margin-top: 20px;
+    line-height: 1.4;
 }
 
 #about>.container .cont p.small {
@@ -408,14 +434,15 @@ header .header-content .line {
 
 #press {
     padding-top: 100px;
-    min-height: 772px
+    
 }
 
 #press h2 {
     font-family: BellGothicBT-Bold;
     color: #1d6049;
     margin: 50px 0 40px;
-    font-size: 20px
+    font-size: 20px;
+    letter-spacing: 1.4px;
 }
 
 #press .press-slider .slide {
@@ -477,14 +504,16 @@ header .header-content .line {
     font-family: BellGothicBT-Bold;
     color: #1d6049;
     margin: 50px 0 40px;
-    font-size: 20px
+    font-size: 20px;
+    letter-spacing: 1.4px;
 }
 
 #events h3 {
     font-family: BellGothicBT-Bold;
     color: #1d6049;
     margin-bottom: 15px;
-    font-size: 16px
+    font-size: 16px;
+    letter-spacing: 1.4px;
 }
 
 #events h3:nth-child(n+1) {
@@ -513,7 +542,12 @@ header .header-content .line {
 }
 
 #events .join {
-    margin-top: 100px
+    margin-top: 100px;
+    padding: 40px 0px;
+    border-top: 2px solid #E1D7CB;
+    border-bottom: 2px solid #E1D7CB;
+    margin-right: -20%;
+    margin-left: -20%;
 }
 
 #events .join form {
@@ -562,7 +596,9 @@ header .header-content .line {
 }
 
 #contact {
-    background: url('../images/contact-bg_03 (2).png') 43% 80% no-repeat;
+    
+    background: url('../images/contact-bg_03 (2).png') 45% 68% no-repeat;
+    background-size: 21%;
     padding-top: 110px;
     min-height: 1100px;
     font-family: BellGothicBT-Roman;
@@ -570,7 +606,11 @@ header .header-content .line {
 }
 
 #contact>.container {
-    width: 980px
+    width: 872px
+}
+
+#contact>.container .col-md-6 {
+    width: 42%;
 }
 
 #contact .col-md-6.margin-left {

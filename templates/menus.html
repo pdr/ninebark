@@ -4,7 +4,7 @@
             <div class="col-md-3">
                 <ul class="menu-nav">
                 {% for menu in boxes.menus.all %}
-                    <li class="active"><a href="#">{{ menu.name }}</a></li>
+                    <li><a href="#">{{ menu.name }}</a></li>
                 {% endfor %}
                 </ul>
                 <div class="bg1">
@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-9">
                 {% for menu in boxes.menus.all %}
-                <div class="menu-content active" data-index="{{ menu.name }}">
+                <div class="menu-content" data-index="{{ menu.name }}">
                     {{ menu.description }}
                 </div>
                 {% endfor %}
