@@ -13,10 +13,19 @@
             <div class="col-md-9">
                 {% for menu in boxes.menus.all %}
                 <div class="menu-content" data-index="{{ menu.name }}">
+
                     {{ menu.description }}
+                    <div class="slider-gall">
+                        <ul class="slides">
+                             {% for image in menu.images %}
+                    <li class="bg2"><img class="img-responsive"src="{{ menu.image }}" /> </li>
+                    {% endfor %}
+                        </ul>
+                   
+                    </div>
                 </div>
                 {% endfor %}
-                <div class="bg2"></div>
+                
             </div>
         </div>
     </div>

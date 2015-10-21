@@ -2,7 +2,14 @@ $(document).ready(function() {
 
     $('body').scrollspy({
         target: '#myNav'
+
+
     });
+
+
+
+
+
 
 
 
@@ -12,7 +19,30 @@ $(document).ready(function() {
     $('#menu .menu-nav li:first-child').addClass('active');
 
     $('.menu-toggle-btn').click(function() {
-        $(this).toggleClass('toggled');
+        var _this = $(this);
+        
+
+
+        if (_this.hasClass('toggled')) {
+            $(this).children('.bar').fadeOut(100, function() {
+           _this.removeClass('toggled');
+           _this.children('.bar').fadeIn(100);    
+        });
+        }
+        else {
+            $(this).children('.bar').fadeOut(100, function() {
+           _this.addClass('toggled');
+           _this.children('.bar').fadeIn(100);    
+        });
+        }
+
+
+
+
+        
+
+
+        
         $('header .header-content nav').fadeToggle();
     });
 
@@ -23,7 +53,7 @@ $(document).ready(function() {
         $(this).parent('li').addClass('active');
 
         var thisTarget = $(this).attr('href');
-        console.log(thisTarget);
+        
         $('html,body').animate({
             scrollTop: $(thisTarget).offset().top
         }, 'slow');
@@ -81,14 +111,40 @@ $(document).ready(function() {
         $(this).parent('li').addClass('active');
         var target = $(this).text();
         $('#menu .menu-content.active').fadeOut(500, function() {
-            $('#menu .menu-content.active').removeClass('active');
+            $(this).removeClass('active');
+            
         });      
         
         $('#menu .menu-content[data-index="' + target + '"]').fadeIn(500, function() {
-            $('#menu .menu-content[data-index="' + target + '"]').addClass('active');
+           
+            // $('#menu .menu-content[data-index="' + target + '"]').trigger('loaded-cont');
+
+         $('#menu .menu-content[data-index="' + target + '"]').addClass('active');
+         
         });
         
     });
 
+    // $('#menu .menu-content').on('loaded-cont', function() {
+    //     $(this).children('.slider-gall').slick({
+    //     autoplay: true,
+    //     fade: true,
+    //     infinite: true,
+    //     dots: false,
+    //     arrows: false,
+    //     slidesToShow: 1
+
+    //     });
+    // });
+
+   
+
 
 });
+
+
+$(window).load(function() {
+    var slideInit =  $('.menu-content .slider-gall').flexslider();
+});
+
+
