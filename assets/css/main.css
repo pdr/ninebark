@@ -211,14 +211,14 @@ header .header-content .line {
 }
 
 #home {
-    min-height: 100vh;
+    
     padding: 100px 0
 }
 
 #home .book-now-box {
-    max-width: 255px;
-    margin: 8% auto 0;
-    height: 450px;
+    max-width: 280px;
+    margin: 6% auto 0;
+    height: 495px;
     text-align: center;
     background: url(../images/home-bg_03.jpg) center center no-repeat;
     background-size: contain;
@@ -232,7 +232,7 @@ header .header-content .line {
     font-size: 20px;
     font-family: BellGothicBT-Bold;
     position: relative;
-    top: 54%;
+    top: 272px;
     letter-spacing: 1.5px;
     transition: .3s all;
     -webkit-transition: .3s all;
@@ -262,12 +262,12 @@ header .header-content .line {
     background: url('../images/bg-leaf_02.jpg') no-repeat;
     background-size: contain;
     max-width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 
 #menu .slider-gall {
-    max-width: 550px;
+    max-width: 700px;
     float: right;
 }
 
@@ -294,20 +294,47 @@ header .header-content .line {
 
 #menu .menu-nav {
     list-style-type: none;
-    text-align: center
+    text-align: left;
+    padding-left: 33.333%;
 }
 
-#menu .menu-nav li {
+
+#menu .menu-nav ul.sub {
+    list-style-type: none;
+    padding-left: 10%;
+}
+
+
+#menu .menu-nav ul.sub {
+    list-style-type: none;
+    padding-left: 7%;
+    display: none;
+}
+#menu .menu-nav li.active ul.sub {
+    
+}
+#menu .menu-nav ul.sub li {
+    font-size: 14px;
+    font-family: BellGothicBT-Bold;
+    color: #6d6e71;
+}
+
+
+#menu .menu-content h2:nth-of-type(n+1) {
+    margin-top: 30px;
+}
+#menu .menu-nav > li {
     margin-bottom: 25px
 }
-#menu .menu-nav li:last-child {
+#menu .menu-nav > li:last-child {
     margin-bottom: 40px;    
 }
-#menu .menu-nav li.active a {
+#menu .menu-nav > li.active a {
     color: #1d6049
 }
 
 #menu .menu-nav li a {
+    outline: 0;
     transition: .3s all;
     -webkit-transition: .3s all;
     -ms-transition: .3s all;
@@ -333,13 +360,21 @@ header .header-content .line {
     -ms-transition: 0.9s all;
 }
 
+#menu .menu-content .price {
+    font-size: 12px;
+}
+
+#menu .menu-content .price:before {
+    content: '\00a0';
+}
+
 #menu .menu-content p {
     line-height: 2.4;
 }
 
 #menu .menu-content.active {
     display: block;
-    
+    margin-top: -30px;
     opacity: 1;
 
 }
@@ -368,9 +403,10 @@ header .header-content .line {
 
 #about {
     background: url(../images/about-bottom_10.png) center bottom no-repeat;
-    padding: 119px 0;
+    padding-bottom: 140px;
     min-height: 1100px;
-    background-size: 28%
+    background-size: 28%;
+    padding-top: 100px;
 }
 
 #about p {
@@ -450,7 +486,7 @@ header .header-content .line {
 }
 
 #press .press-slider .slide img {
-    max-width: 75%;
+    max-width: 100%;
     margin: 0 auto;
     border: 1px solid #636262;
 }
@@ -538,7 +574,8 @@ header .header-content .line {
 
 #events p {
     font-family: BellGothicBT-Roman;
-    font-size: 13px
+    font-size: 14px;
+    color: #6d6e71;
 }
 
 #events .join {
@@ -549,7 +586,12 @@ header .header-content .line {
     margin-right: -20%;
     margin-left: -20%;
 }
-
+#events .join .col-md-6.col-md-offset-3 {
+    margin-left: 29%;
+}
+#events .col-md-6.col-md-offset-3 {
+    margin-left: 29%;
+}
 #events .join form {
     margin-top: 23px
 }
@@ -604,7 +646,9 @@ header .header-content .line {
     font-family: BellGothicBT-Roman;
     font-size: 13px
 }
-
+#contact .map-img {
+    margin-top: 25px;
+}
 #contact>.container {
     width: 872px
 }
@@ -659,6 +703,9 @@ header .header-content .line {
 #contact  a {
     color: #6d6e71;
     text-decoration: underline;   
+}
+#contact  p {
+        color: #6d6e71;
 }
 
 #success, #error {

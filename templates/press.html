@@ -4,10 +4,10 @@
       <h2 class="text-center">press</h2>
       <div class="press-slider">
       {% for press in boxes.press.featured %}
-          <div class="slide"><a href="{{ press.external_url }}"><img src="{{ press.image|resize(217, 278, "crop") }}"></a></div>
+          <div class="slide"><a href="{{ press.external_url }}" target="_blank"><img src="{{ press.image|resize(217, 278, "crop") }}"></a></div>
       {% endfor %}
        {% for press in boxes.press.not_featured %}
-          <div class="slide"><a href="{{ press.external_url }}"><img src="{{ press.image|resize(217, 278, "crop") }}"></a></div>
+          <div class="slide"><a href="{{ press.external_url }}" target="_blank"><img src="{{ press.image|resize(217, 278, "crop") }}"></a></div>
       {% endfor %}
       </div>
   </div>

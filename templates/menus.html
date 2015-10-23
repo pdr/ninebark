@@ -3,30 +3,35 @@
         <div class="row">
             <div class="col-md-3">
                 <ul class="menu-nav">
-                {% for menu in boxes.menus.all %}
+                    {% for category in boxes.menus.categories %}
+                    {% if category.slug != 'uncategorized' %}
+                <li><a href="#">{{ category.name }}</a>
+                    <ul class="sub">
+                    {% for menu in category.all %}
                     <li><a href="#">{{ menu.name }}</a></li>
-                {% endfor %}
-                </ul>
-                <div class="bg1">
-                </div>
-            </div>
-            <div class="col-md-9">
-                {% for menu in boxes.menus.all %}
-                <div class="menu-content" data-index="{{ menu.name }}">
-
-                    {{ menu.description }}
-                    <div class="slider-gall">
-                        <ul class="slides">
-                             {% for image in menu.images %}
-                    <li class="bg2"><img class="img-responsive"src="{{ image }}" /> </li>
                     {% endfor %}
-                        </ul>
-                   
-                    </div>
-                </div>
+                    </ul>
+                </li>
+                {% endif %}
                 {% endfor %}
-                
-            </div>
+</ul>
+<div class="bg1">
+</div>
+</div>
+<div class="col-md-9">
+{% for menu in boxes.menus.all %}
+<div class="menu-content" data-index="{{ menu.name }}">
+{{ menu.description }}
+<div class="slider-gall">
+<ul class="slides">
+{% for image in menu.images %}
+<li class="bg2"><img class="img-responsive"src="{{ image }}" /> </li>
+{% endfor %}
+</ul>
+</div>
+</div>
+{% endfor %}
+</div>
         </div>
     </div>
 </section>
