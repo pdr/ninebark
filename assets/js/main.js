@@ -85,18 +85,54 @@ $(document).ready(function() {
         ]
     });
 
-    $('#menu .menu-nav > li a').click(function(event) {
+    $('#menu .menu-nav > li > a').click(function(event) {
         
+
         event.preventDefault();
-        var thisSubhead = $(this).next('.sub');
-
-        
-        $('#menu .menu-nav .sub').slideUp('fast');
-        thisSubhead.slideDown('fast');
-
-        
         $('#menu .menu-nav > li').removeClass('active');
         $(this).parent('li').addClass('active');
+        var thisSubhead = $(this).next('.sub');
+        $('#menu .menu-nav .sub').slideUp('fast');
+         thisSubhead.slideDown('fast');
+
+
+
+        // if ($(this).has('.sub')) {
+        //      var thisSubhead = $(this).next('.sub');
+
+        
+        // $('#menu .menu-nav .sub').slideUp('fast');
+        // thisSubhead.slideDown('fast');
+        // }
+       
+        // else {
+        //     $('#menu .menu-nav > li').removeClass('active');
+        // $(this).parent('li').addClass('active');
+        // var target = $(this).text();
+        // $('#menu .menu-content.active').fadeOut(500, function() {
+        //     $(this).removeClass('active');
+            
+        // });      
+        
+        // $('#menu .menu-content[data-index="' + target + '"]').fadeIn(500, function() {
+           
+        //     // $('#menu .menu-content[data-index="' + target + '"]').trigger('loaded-cont');
+
+        //  $('#menu .menu-content[data-index="' + target + '"]').addClass('active');
+         
+        // }); 
+        // }
+        
+       
+        
+    });
+
+$('#menu .menu-nav > li .sub li a').click(function(event) {
+    $('#menu .menu-nav > li').removeClass('active');
+    $('#menu .menu-nav > li .sub li').removeClass('active');
+    $(this).parent('li').addClass('active');
+    $(this).parent('li').parent('ul').parent('li').addClass('active');
+
         var target = $(this).text();
         $('#menu .menu-content.active').fadeOut(500, function() {
             $(this).removeClass('active');
@@ -109,9 +145,12 @@ $(document).ready(function() {
 
          $('#menu .menu-content[data-index="' + target + '"]').addClass('active');
          
-        });
-        
-    });
+        }); 
+    event.preventDefault();
+    event.stopPropagation();
+
+
+});
 
     // $('#menu .menu-content').on('loaded-cont', function() {
     //     $(this).children('.slider-gall').slick({

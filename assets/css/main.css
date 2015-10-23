@@ -329,7 +329,7 @@ header .header-content .line {
 #menu .menu-nav > li:last-child {
     margin-bottom: 40px;    
 }
-#menu .menu-nav > li.active a {
+#menu .menu-nav > li.active > a {
     color: #1d6049
 }
 
@@ -343,6 +343,10 @@ header .header-content .line {
     font-family: BellGothicBT-Bold;
     color: #6d6e71
 }
+#menu .menu-nav ul.sub > li.active a, #menu .menu-nav ul.sub > li.active {
+    color: #1d6049;
+}
+
 
 #menu .menu-nav li a:focus,
 #menu .menu-nav li a:hover {
