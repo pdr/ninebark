@@ -374,6 +374,7 @@ header .header-content .line {
 
 #menu .menu-content p {
     line-height: 1.8;
+    margin-bottom: 15px;
 }
 
 #menu .menu-content.active {
