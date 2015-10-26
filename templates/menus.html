@@ -20,7 +20,7 @@
 </div>
 <div class="col-md-9">
 {% for menu in boxes.menus.all %}
-<div class="menu-content" data-index="{{ menu.name }}">
+<div class="menu-content" data-index="{{ menu.categories[0].name }}-{{ menu.name }}">
 {{ menu.description }}
 <div class="slider-gall">
 <ul class="slides">

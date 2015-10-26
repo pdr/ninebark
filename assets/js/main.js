@@ -7,7 +7,9 @@ $(document).ready(function() {
     $('#events .col-md-6:only-child').addClass('col-md-offset-3 text-center');
     $('#menu .menu-content:first-child').addClass('active');
     $('#menu .menu-nav > li:first-child').addClass('active');
+    $('#menu .menu-nav > li.active ul li:first-child').addClass('active');
     $('#menu .menu-nav > li:first-child').children('.sub').slideToggle();
+
 
     $('.menu-toggle-btn').click(function() {
         var _this = $(this);
@@ -133,7 +135,8 @@ $('#menu .menu-nav > li .sub li a').click(function(event) {
     $(this).parent('li').addClass('active');
     $(this).parent('li').parent('ul').parent('li').addClass('active');
 
-        var target = $(this).text();
+        var target = $(this).closest('ul').siblings('a').text() + '-' + $(this).text();
+        console.log(target);
         $('#menu .menu-content.active').fadeOut(500, function() {
             $(this).removeClass('active');
             
