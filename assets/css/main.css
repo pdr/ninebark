@@ -285,7 +285,7 @@ header .header-content .line {
     -webkit-transition: 0.9s all;
     -moz-transition: 0.9s all;
     -ms-transition: 0.9s all;
-    overflow: hidden;
+    
 }
 
 #menu .col-md-3 {
