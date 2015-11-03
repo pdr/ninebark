@@ -530,6 +530,28 @@ header .header-content .line {
     background: url(../images/events-right_03.png) right center no-repeat
 }
 
+#events .view-space-btn {
+    display: block;
+    text-align: center;
+    margin: 30px 0px 20px 0px;
+    color: #6d6e71;
+    text-decoration: underline;
+    font-family: 'BellGothicBT-Roman';
+    
+}
+
+#events .view-space-btn.mask {
+    display: none !important;
+}
+
+
+
+
+#events p a {
+    color: #6d6e71;
+    text-decoration: underline;
+}
+
 #events>.container {
     width: 872px
 }

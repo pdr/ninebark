@@ -12,7 +12,14 @@
             {{ menu.fields.description }}
             {% if loop.index is divisibleby 3 %}</div><div class="col-md-6 margin-left">{% endif %}
         {% endfor %}
+        <a class="view-space-btn text-center" href="{{ static('images/lightbox.jpg') }}" data-lightbox="image-1">View the space</a>
+        <a class="view-space-btn text-center mask" href="{{ static('images/lightbox.jpg') }}" data-lightbox="image-1">View the space</a>
 
+        <a class="view-space-btn text-center mask" href="{{ static('images/lightbox.jpg') }}" data-lightbox="image-1">View the space</a>
+
+        <a class="view-space-btn text-center mask" href="{{ static('images/lightbox.jpg') }}" data-lightbox="image-1">View the space</a>
+
+        <a class="view-space-btn text-center mask" href="{{ static('images/lightbox.jpg') }}" data-lightbox="image-1">View the space</a>
         <div class="contact">
             <h3>contact us</h3>
             <p>Phone: {{ boxes.locations.all[0].phone_number }} or <a href="#">info@ninebark-napa.com</a> </p>

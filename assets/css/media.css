@@ -136,7 +136,7 @@
 
 /* Small Devices, Tablets */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     header {
         min-height: 60px;
     }
@@ -171,6 +171,9 @@
     }
     header .header-content nav ul li a {
         font-family: 'BellGothicBT-Bold';
+    }
+    header .header-content .menu-toggle-btn {
+        display: block !important;
     }
 
 }
@@ -237,7 +240,7 @@
 
 /* Small Devices, Tablets */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     header .header-content nav {
         display: block !important;
     }
