@@ -531,14 +531,30 @@ header .header-content .line {
 }
 
 #events .view-space-btn {
-    display: block;
-    text-align: center;
+    color: #1d6049;
+    padding: 6px 50px;
     margin: 30px 0px 20px 0px;
-    color: #6d6e71;
-    text-decoration: underline;
-    font-family: 'BellGothicBT-Roman';
+    border: 1px solid #1d6049;
+    font-size: 20px;
+    display: block;
+    font-family: BellGothicBT-Bold;
+    
+    
+    letter-spacing: 1.5px;
+    transition: .3s all;
+    -webkit-transition: .3s all;
+    -ms-transition: .3s all;
+    -moz-transition: .3s all
     
 }
+
+#events .view-space-btn:hover, #events .view-space-btn:focus {
+        text-decoration: none;
+    background-color: #1d6049;
+    color: #f6f6f6
+}
+
+
 
 #events .view-space-btn.mask {
     display: none !important;
